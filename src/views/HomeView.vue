@@ -11,6 +11,13 @@ export default {
     }
     
   },
+  methods: {
+
+    toArticle(id) {
+
+      this.$router.push({path: `/article/${id}`})
+    }
+  },
 
   components: {
     NavBar
@@ -32,10 +39,10 @@ export default {
   <div>
   <NavBar />
 
-  <div v-if="articles" class="border-2 border-black mt-8 flex justify-around flex-wrap">
+  <div v-if="articles" class="mt-8 flex justify-around flex-wrap">
 
  
-    <div v-for="(article, index) in articles" :key="index" class="bg-white shadow-md border border-gray-200 rounded-lg w-96 h-96 mb-5">
+    <div v-for="(article, index) in articles" :key="index" @click="toArticle(article.id)" class="bg-white shadow-md border border-gray-200 rounded-lg w-96 h-96 mb-5 hover:scale-105 ease-out duration-300">
         <a href="#">
             <img class="w-96 h-56 rounded-t-lg" :src='article.image_path' alt="">
         </a>

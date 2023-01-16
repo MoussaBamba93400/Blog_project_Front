@@ -28,6 +28,11 @@ const router = createRouter({
       path: '/upload',
       name: 'upload',
       component: Upload
+    },
+    {
+      path: '/article/:id',
+      name: 'article',
+      component: () => import('../views/ArticleView.vue')
     }
   ]
 })

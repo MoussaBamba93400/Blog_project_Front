@@ -4,6 +4,9 @@
     <NavBar />
     <input type="file" ref="image" @change="uploadImage" />
     <button @click="submit">Submit</button>
+
+    <!-- component -->
+
   </div>
 </template>
 
