@@ -1,18 +1,14 @@
 <script>
-import Header from '../components/Header.vue';
+import NavBar from '../components/NavBar.vue'
 
+export default {
+  components: {
+    NavBar
+  }
+}
 </script>
-
 <template>
-
-
-  <div class="border-2 border-black flex justify-center">
-    <h1>Home</h1>
-  </div>
+  <NavBar />
 </template>
 
-<style scoped>
-button {
-  font-weight: bold;
-}
-</style>
+

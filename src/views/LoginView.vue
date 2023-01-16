@@ -1,7 +1,7 @@
 
 <template>
  <!-- component -->
-<div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20201022/pngtree-light-pink-abstract-background-pink-furry-background-design-template-image_431361.jpg);"><div class="absolute  opacity-75 inset-0 z-0"></div>
+<div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(https://c0.wallpaperflare.com/preview/639/306/330/aerial-background-blog-cafe.jpg);"><div class="absolute  opacity-75 inset-0 z-0"></div>
   <div class="min-h-screen sm:flex sm:flex-row mx-0 justify-center">
       <div class="flex-col flex  self-center p-10 sm:max-w-5xl xl:max-w-2xl  z-10">
         <div class="self-start hidden lg:flex flex-col  text-white">
