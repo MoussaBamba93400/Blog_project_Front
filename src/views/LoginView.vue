@@ -88,7 +88,11 @@ export default {
     console.log(response);
 
     if(response.status == 200) {
+      localStorage.setItem('token', response.data.authorisation.token)
+      localStorage.setItem("id", response.data.user.id)
       window.location.href = '/home'
+
+
     }
 
 

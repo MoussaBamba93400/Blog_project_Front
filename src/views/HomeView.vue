@@ -1,5 +1,6 @@
 <script>
 import NavBar from '../components/NavBar.vue'
+import Footer from '../components/Footer.vue'
 import axios from 'axios'
 
 export default {
@@ -20,11 +21,18 @@ export default {
   },
 
   components: {
-    NavBar
+    NavBar,
+    Footer
   },
   mounted () {
+
+   let token = localStorage.getItem('token');
+ console.log(token)
     axios
-      .get('http://localhost:8000/api/v1/articles')
+      .get('http://localhost:8000/api/v1/articles',{
+  headers: {
+    Authorization: `Bearer ${token}`
+  }})
       .then(response => {this.articles = response.data.articles
         console.log(this.articles[0].image_path)
       })
@@ -58,6 +66,7 @@ export default {
    
   </div>
 
+  <Footer />
 </div>
 </template>
 
