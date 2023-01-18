@@ -1,7 +1,10 @@
 
 <template>
- <!-- component -->
-<div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(https://c0.wallpaperflare.com/preview/639/306/330/aerial-background-blog-cafe.jpg);"><div class="absolute  opacity-75 inset-0 z-0"></div>
+  
+  
+  
+  <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(https://c0.wallpaperflare.com/preview/639/306/330/aerial-background-blog-cafe.jpg);"><div class="absolute  opacity-75 inset-0 z-0"></div>
+  <NavBar /> 
   <div class="min-h-screen sm:flex sm:flex-row mx-0 justify-center">
       <div class="flex-col flex  self-center p-10 sm:max-w-5xl xl:max-w-2xl  z-10">
         <div class="self-start hidden lg:flex flex-col  text-white">
@@ -44,7 +47,7 @@
               <label class="mb-5 text-sm font-medium text-gray-700 tracking-wide">
                 Password
               </label>
-              <input v-model="formData.password" class="w-full content-center text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-green-400" type="" placeholder="Enter your password">
+              <input v-model="formData.password" class="w-full content-center text-base px-4 py-2 border  border-gray-300 rounded-lg focus:outline-none focus:border-green-400" type="password" placeholder="Enter your password">
             </div>
   
             <div>
@@ -66,6 +69,7 @@
 
 <script>
 import axios from 'axios'
+import NavBar from '../components/NavBar.vue'
 
 
 
@@ -128,6 +132,11 @@ export default {
       }
     }
   }
-} 
+},
+
+components: {
+    NavBar,
+  
+}
 }
 </script>

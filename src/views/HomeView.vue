@@ -15,7 +15,6 @@ export default {
   methods: {
 
     toArticle(id) {
-
       this.$router.push({path: `/article/${id}`})
     }
   },
@@ -35,6 +34,9 @@ export default {
   }})
       .then(response => {this.articles = response.data.articles
         console.log(this.articles[0].image_path)
+      })
+      .catch((error) => {
+        console.log(error)
       })
   }
 }

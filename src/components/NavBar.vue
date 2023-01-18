@@ -12,6 +12,7 @@ import { RouterLink } from 'vue-router';
       <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li><router-link to="/home">Homepage</router-link></li>
         <li><router-link to="/upload">Upload</router-link></li>
+        <li><router-link to="/login">Login</router-link></li>
         <li><a>About</a></li>
       </ul>
     </div>

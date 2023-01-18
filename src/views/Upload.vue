@@ -3,6 +3,10 @@
   <div>
     <NavBar />
 
+
+
+
+    <div v-if="token">
     <form action="" v-on:submit.prevent="uploadPost()" class="flex flex-col mt-14" >
  
 
@@ -21,8 +25,14 @@
       </div>
       <button type="submit" class="w-96 btn glass bg-black hover:border-black self-center">Submit</button>
     </form>
-
     <h1 v-if="sent">Your Post as been sent!!</h1>
+</div>
+
+<div v-else class="flex justify-center mt-60 text-xl align-middl items-center">Youn cannot access the uploading functionnality if you don't have an account   <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+  <router-link to="/login">Go to login page</router-link>
+</button></div>
+
+
 
   </div>
 </template>
@@ -49,6 +59,12 @@
 <script>
 import axios from 'axios';
 import NavBar from '../components/NavBar.vue';
+import { RouterLink } from 'vue-router';
+
+
+
+
+
 
 export default {
 
@@ -57,7 +73,8 @@ export default {
       title: "",
       body: "",
       user_id: 11,
-      sent: false
+      sent: false,
+      token: false
     }
   },
 
@@ -80,13 +97,24 @@ export default {
     async submit() {
       this.uploadPost();
     },
+
     
-    test() {
-      console.log(this.body)
+    checkToken() {
+    
+      let token = localStorage.getItem('token');
+
+      this.token = token === null? false: true;
     },
   },
   components: {
     NavBar
+  },
+
+  mounted() {
+    this.checkToken()
   }
+
+
+  
 }
 </script>
