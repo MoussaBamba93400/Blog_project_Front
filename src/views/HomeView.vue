@@ -28,10 +28,7 @@ export default {
    let token = localStorage.getItem('token');
  console.log(token)
     axios
-      .get('http://localhost:8000/api/v1/articles',{
-  headers: {
-    Authorization: `Bearer ${token}`
-  }})
+      .get('http://localhost:8000/api/v1/articles')
       .then(response => {this.articles = response.data.articles
         console.log(this.articles[0].image_path)
       })
@@ -58,9 +55,9 @@ export default {
         </a>
         <div class="p-5">
             <a href="#">
-                <h5 class="border-2 border-black text-center text-gray-900 font-bold text-2xl tracking-tight mb-2">{{article.title}}</h5>
+                <h5 class="text-center text-gray-900 font-bold text-2xl tracking-tight mb-2">{{article.title}}</h5>
             </a>
-            <p class="font-normal border-2 border-black text-gray-700 mb-3">{{ article.body }}</p>
+            <p class="font-normal text-gray-700 mb-3 truncate">{{ article.body }}</p>
             
         </div>
     </div>
