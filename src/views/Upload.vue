@@ -40,18 +40,13 @@
 
 
 <style>
-
-
 @media screen and (max-width: 1000px) {
   .textarea {
     width: 100%;
   }
-
   .image-input {
     width: 90%;
   }
-
-
 }
 </style>
 
@@ -60,14 +55,7 @@
 import axios from 'axios';
 import NavBar from '../components/NavBar.vue';
 import { RouterLink } from 'vue-router';
-
-
-
-
-
-
 export default {
-
   data() {
     return {
       title: "",
@@ -77,8 +65,6 @@ export default {
       token: false
     }
   },
-
-
   methods: {
     async uploadPost() {
       let formData = new FormData();
@@ -87,6 +73,7 @@ export default {
       formData.append('body', this.body);
       formData.append('user_id', this.user_id);
       try {
+       
         let response = await axios.post('http://localhost:8000/api/v1/article', formData);
         this.sent = true
         console.log(response.data);
@@ -97,24 +84,19 @@ export default {
     async submit() {
       this.uploadPost();
     },
-
     
     checkToken() {
     
       let token = localStorage.getItem('token');
-
       this.token = token === null? false: true;
     },
   },
   components: {
     NavBar
   },
-
   mounted() {
     this.checkToken()
   }
-
-
   
 }
 </script>

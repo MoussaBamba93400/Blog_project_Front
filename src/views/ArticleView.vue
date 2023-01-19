@@ -72,6 +72,25 @@ export default {
             axios.get(`http://localhost:8000/api/v1/article/${id}/comments`)
             .then(response => this.comments = response.data.comments)
             .catch(error => console.log(error));
+        },
+
+        submitComment() {
+          const ArticleId  = this.$route.params.id;
+          const userId = localStorage.getItem('id');
+          const token = localStorage.getItem('token');
+
+          axios.post(`http://localhost:8000/api/v1/article/${ArticleId}/comment`, {
+            body: this.comment,
+            user_id: userId,
+            article_id: ArticleId
+          }, {
+            headers: {
+            Authorization : `Bearer ${token}`
+    }
+          })
+          .then(response =>  window.location.reload())
+          .catch(error => console.log(error))
+
         }
         
     },
