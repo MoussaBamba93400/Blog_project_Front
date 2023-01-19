@@ -1,4 +1,3 @@
-
 <template>
   
   
@@ -6,15 +5,7 @@
   <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(https://c0.wallpaperflare.com/preview/639/306/330/aerial-background-blog-cafe.jpg);"><div class="absolute  opacity-75 inset-0 z-0"></div>
   <NavBar /> 
   <div class="min-h-screen sm:flex sm:flex-row mx-0 justify-center">
-      <div class="flex-col flex  self-center p-10 sm:max-w-5xl xl:max-w-2xl  z-10">
-        <div class="self-start hidden lg:flex flex-col  text-white">
-          <img src="" class="mb-3">
-          <h1 class="mb-3 font-bold text-5xl">Hi Welcome </h1>
-          <p class="pr-3">Lorem ipsum is placeholder text commonly used in the graphic, print,
-            and publishing industries for previewing layouts and visual mockups</p>
-        </div>
-      </div>
-
+      
 
       <div class="flex justify-center self-center  z-10">
 

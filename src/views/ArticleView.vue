@@ -14,7 +14,7 @@
     
 
 
-    <div class="mx-60">
+    <div class="mx-60 md:w-4/4 md:mx-0  md:ml-4">
         <h1 class="">Comment</h1>
 
         <div v-for="(comment, index) in comments" :key="index">
@@ -23,7 +23,7 @@
     </div>
 
 
-    <div class="flex flex-col mx-60">
+    <div class="flex flex-col mx-60 md:w-3/4 md:mx-0 md:ml-4">
     <div class="relative rounded-md shadow-sm ">
       <textarea
         v-model="comment"
