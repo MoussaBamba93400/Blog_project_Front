@@ -46,7 +46,7 @@ export default {
   <div>
   <NavBar />
 
-  <div v-if="articles" class="mt-8 flex justify-around flex-wrap mb-72">
+  <div v-if="articles.length > 0" class="mt-8 flex justify-around flex-wrap mb-72">
 
  
     <div v-for="(article, index) in articles" :key="index" @click="toArticle(article.id)" class="bg-white shadow-md border border-gray-200 rounded-lg w-96 h-96 mb-5 hover:scale-105 ease-out duration-300">
@@ -62,8 +62,11 @@ export default {
         </div>
     </div>
    
-   
   </div>
+
+  <div v-else >
+     Not Article be the first to make one.
+    </div>
 
   <Footer />
 </div>

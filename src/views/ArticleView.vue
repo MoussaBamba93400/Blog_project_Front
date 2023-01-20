@@ -89,7 +89,7 @@ export default {
     }
           })
           .then(response =>  window.location.reload())
-          .catch(error => console.log(error))
+          .catch(error => alert("Vous devez avoir un compte un compte pour commenté"))
 
         }
         

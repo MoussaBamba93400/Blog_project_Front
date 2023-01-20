@@ -60,7 +60,7 @@ export default {
     return {
       title: "",
       body: "",
-      user_id: 11,
+      user_id: "",
       sent: false,
       token: false
     }
@@ -87,8 +87,10 @@ export default {
     
     checkToken() {
     
-      let token = localStorage.getItem('token');
+      const token = localStorage.getItem('token');
       this.token = token === null? false: true;
+      const id =  localStorage.getItem('id');
+      this.user_id = id;      
     },
   },
   components: {

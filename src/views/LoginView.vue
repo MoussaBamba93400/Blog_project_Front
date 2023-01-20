@@ -1,8 +1,6 @@
 <template>
   
-  
-  
-  <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(https://c0.wallpaperflare.com/preview/639/306/330/aerial-background-blog-cafe.jpg);"><div class="absolute  opacity-75 inset-0 z-0"></div>
+  <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(https://media.istockphoto.com/id/877787978/photo/dark-blue-abstract-background.jpg?b=1&s=170667a&w=0&k=20&c=ESrP0j2wQ0LwEbm3TwdoDrJZZjnQGMRNCxKXgBgqh_s=);"><div class="absolute  opacity-75 inset-0 z-0"></div>
   <NavBar /> 
   <div class="min-h-screen  flex flex-row mx-0 justify-center">
       
@@ -57,7 +55,6 @@
   </div>
 </div>
 </template>
-
 <script>
 import axios from 'axios'
 import NavBar from '../components/NavBar.vue'
