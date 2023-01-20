@@ -34,7 +34,12 @@ const router = createRouter({
       name: 'article',
       component: () => import('../views/ArticleView.vue')
     },
-    { path: '/', redirect: '/login' }
+    { path: '/', redirect: '/login' },
+    {
+      path: '/post',
+      name: 'post',
+      component: () => import('../views/PostView.vue')
+    }
   ]
 })
 

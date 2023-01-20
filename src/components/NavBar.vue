@@ -1,7 +1,3 @@
-<script>
-import { RouterLink } from 'vue-router';
-</script>
-
 <template>
   <div class="navbar bg-base-100 shadow-lg shadow-cyan-500/50 h-36">
   <div class="navbar-start">
@@ -13,7 +9,8 @@ import { RouterLink } from 'vue-router';
         <li><router-link to="/home">Homepage</router-link></li>
         <li><router-link to="/upload">Upload</router-link></li>
         <li><router-link to="/login">Login</router-link></li>
-        <li><a>About</a></li>
+        <li><router-link to="/post">Post</router-link></li>
+        <li><button @click="Logout">Logout</button></li>
       </ul>
     </div>
   </div>
@@ -23,3 +20,21 @@ import { RouterLink } from 'vue-router';
   
 </div>
 </template>
+
+
+
+<script>
+import { RouterLink } from 'vue-router';
+
+export default {
+
+  methods: {
+
+    Logout() {
+      localStorage.clear();
+      window.location.href = '/login';
+    }
+
+  }
+}
+</script>

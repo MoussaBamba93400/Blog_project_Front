@@ -16,7 +16,7 @@
       </div>
 
 
-      <textarea class="textarea textarea-info md:w-1/3 h-36 self-center mb-6" placeholder="Texte"  v-model="body" required></textarea>
+      <textarea class="textarea textarea-info  w-96 h-36 self-center mb-6" placeholder="Texte"  v-model="body" required></textarea>
       
 
       <div class=" img-input  self-center flex justify-between mb-6">

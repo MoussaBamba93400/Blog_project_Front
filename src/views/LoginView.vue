@@ -4,7 +4,7 @@
   
   <div class="bg-no-repeat bg-cover bg-center relative" style="background-image: url(https://c0.wallpaperflare.com/preview/639/306/330/aerial-background-blog-cafe.jpg);"><div class="absolute  opacity-75 inset-0 z-0"></div>
   <NavBar /> 
-  <div class="min-h-screen sm:flex sm:flex-row mx-0 justify-center">
+  <div class="min-h-screen  flex flex-row mx-0 justify-center">
       
 
       <div class="flex justify-center self-center  z-10">
@@ -94,7 +94,7 @@ export default {
   })
   .catch(function (error) {
     console.log(error);
-    alert('An error occurred while logging in.')
+    alert('Your account as not been found!')
   })
        
       } catch (error) {
